@@ -1,6 +1,6 @@
-# POG26' 入口ページ
+# POG26-27' 入口ページ
 
-iPhoneのホーム画面にアイコン付きで追加するための入口。開くとすぐ Google Apps Script の公開URL（アプリ本体）へ移動する。
+iPhoneのホーム画面にアイコン付きで追加するための入口。Safariで開くと「ホーム画面に追加」の案内を表示し、ホーム画面のアイコンから開くとアプリ本体（Google Apps Script）を全画面で表示する。
 
 - `index.html` … アプリ本体（POG26'）
 - `draft/index.html` … 指名会（ドラフト）

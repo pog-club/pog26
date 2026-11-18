@@ -2,7 +2,7 @@
   "name": "POG26-27'",
   "short_name": "POG26-27'",
   "start_url": "./",
-  "display": "browser",
+  "display": "standalone",
   "background_color": "#1f5c3f",
   "theme_color": "#1f5c3f",
   "icons": [
