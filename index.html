@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>POG26'</title>
+<!-- iPhoneのホーム画面用（名前とアイコン） -->
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="POG26'">
+<meta name="theme-color" content="#1f5c3f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon.png">
+<style>
+  html, body { margin: 0; height: 100%; background: #1f5c3f; }
+  .box { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: #fff; font-family: -apple-system, "Hiragino Sans", sans-serif; gap: 14px; }
+  .box img { width: 96px; height: 96px; border-radius: 22px; }
+  .box a { color: #f2d77a; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="box">
+  <img src="apple-touch-icon.png" alt="">
+  <div>アプリを開いています…</div>
+  <a id="go" href="#">開かない場合はこちら</a>
+</div>
+<script>
+  // アプリ本体（Google Apps Script）の公開URL。サーバーを移すときはここだけ変える
+  var APP_URL = 'https://script.google.com/macros/s/AKfycbwS9DtNTD4auxtbE2y6H8KTRpNCx42r93NSyiuwPIh9NdQ6OKefYK_UzmVT5zDPziN7/exec';
+  var page = document.body.getAttribute('data-page') || '';
+  var url = APP_URL + (page ? '?page=' + page : '');
+  document.getElementById('go').href = url;
+  // ホーム画面のアイコンから開いたら、そのままアプリへ移動
+  location.replace(url);
+</script>
+</body>
+</html>
